@@ -27,7 +27,7 @@
     <b>Description: </b>{{product.description}}<br/>
     <b>Price: </b>{{product.price}} OMR<br/>
     <b>Discount percentage: {{product.discountPercentage}}%<br/></b>
-    <b >Category: </b> {{product.category}}
+    <b>Category:{{product.category}}</b>
     <img class='cardimg' :src=product.thumbnail alt="Avatar" style="width:100%">
     <div style="align: right">
         <b>Rating: </b>{{product.rating}}/5<br/>
