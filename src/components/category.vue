@@ -12,7 +12,7 @@ await new Promise(resolve => {
 })
     
 try {
-    const res = await fetch('https://dummyjson.com/products')
+    const res = await fetch('https://dummyjson.com/products/')
     //console.log(res)
     response.value = (await res.json())
 } catch (error) {
