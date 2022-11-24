@@ -2,7 +2,7 @@
 	import { ref } from 'vue';
     import Listing from "./Listing.vue";
 	const response = ref({});
-    const SelectedProduct = ref(null);
+  const SelectedProduct = ref(null);
 
 
   // adding delay
@@ -22,21 +22,35 @@
 
 </script>
 <template >
+
+  
+<select  v-model="SelectedProduct" >
+<option>smartphones</option>
+<option>laptops</option>
+<option>fragrances</option>
+<option>skincare</option>
+<option>groceries</option>
+<option>home-decoration</option>
+</select>
 <div  class="card" v-for="product in response.products" :key="product.id" > 
     <b>{{ product.title }} </b><hr/> 
-    <b>Description: </b>{{product.description}}<br/>
+    <!-- <b>Description: </b>{{product.description}}<br/> -->
     <b>Price: </b>{{product.price}} OMR<br/>
-    <b>Discount percentage: {{product.discountPercentage}}%<br/></b>
-    <b>Category:{{product.category}}</b>
+    <!-- <b>Discount percentage: {{product.discountPercentage}}%<br/></b>
+    <b>Category:{{product.category}}</b> -->
     <img class='cardimg' :src=product.thumbnail alt="Avatar" style="width:100%">
-    <div style="align: right">
+    <div style="text-align:center">
         <b>Rating: </b>{{product.rating}}/5<br/>
         <span v-if="product.rating >= 5">⭐ ⭐ ⭐ ⭐ ⭐</span>
         <span v-else-if="product.rating >= 4">⭐ ⭐ ⭐ ⭐</span>
         <span v-else-if="product.rating >= 3">⭐ ⭐ ⭐</span>
         <span v-else-if="product.rating >= 2">⭐ ⭐</span>
-        <span v-else>⭐</span>
+        <span v-else>⭐</span><br/>
+        
+        <!-- <button v-model="SelectedProduct">View Details</button> -->
     </div>
+    <Listing :product="SelectedProduct"/>
+   
 </div>
 <!-- <p class="card" v-for="product in response.products" :key="product.id">
     {{ product.title }}</p> -->
