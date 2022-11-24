@@ -1,15 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1 style="color:black; text-align:justify; font-weight: 800; font-size:26px">Shop shows you what you want,
+and what you really really want.</h1>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
+@media (min-width: 1524px) {
   .about {
-    min-height: 100vh;
     display: flex;
     align-items: center;
+    
   }
 }
 </style>

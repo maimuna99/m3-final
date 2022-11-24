@@ -5,7 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img   src="@/assets/marketicon.png" width="350" height="350" />
 <div></div>
     <div class="wrapper">
       <HelloWorld msg="Shopping Market" />
@@ -29,20 +29,16 @@ header {
 
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(#540b0e);
 }
 
 nav a.router-link-exact-active:hover {
@@ -52,7 +48,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid var(#540b0e;);
 }
 
 nav a:first-of-type {
@@ -66,23 +62,13 @@ nav a:first-of-type {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 
   nav {
     text-align: left;
     margin-left: -1rem;
-    font-size: 1rem;
+    font-size: 2rem;
 
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>
