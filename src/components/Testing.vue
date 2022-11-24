@@ -41,14 +41,15 @@
     <img class='cardimg' :src=product.thumbnail alt="Avatar" style="width:100%">
     <div style="text-align:center">
         <b>Rating: </b>{{product.rating}}/5<br/>
-        <span v-if="product.rating >= 5">⭐ ⭐ ⭐ ⭐ ⭐</span>
-        <span v-else-if="product.rating >= 4">⭐ ⭐ ⭐ ⭐</span>
-        <span v-else-if="product.rating >= 3">⭐ ⭐ ⭐</span>
-        <span v-else-if="product.rating >= 2">⭐ ⭐</span>
+        <span v-if="product.rating >= 4.5">⭐ ⭐ ⭐ ⭐ ⭐</span>
+        <span v-else-if="product.rating >= 3.5">⭐ ⭐ ⭐ ⭐</span>
+        <span v-else-if="product.rating >= 2.5">⭐ ⭐ ⭐</span>
+        <span v-else-if="product.rating >= 1.5">⭐ ⭐</span>
         <span v-else>⭐</span><br/>
         
         <!-- <button v-model="SelectedProduct">View Details</button> -->
     </div>
+    <RouterLink :to="{name:'product', params:{id:product.id}}"> View Details</RouterLink>
     <Listing :product="SelectedProduct"/>
    
 </div>

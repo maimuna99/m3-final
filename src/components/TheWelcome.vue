@@ -9,18 +9,18 @@ import SupportIcon from './icons/IconSupport.vue'
 
 <template>
   <WelcomeItem>
-    <template #icon>
+    <template >
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>Smart Phones</template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    Shopping Market's
+    <a href="https://vuejs.org/" target="_blank" rel="noopener">Smart Phones</a>
+    provided you with all accessories and latest technologies you need to get started.
   </WelcomeItem>
 
   <WelcomeItem>
-    <template #icon>
+    <template >
       <ToolingIcon />
     </template>
     <template #heading>Tooling</template>
@@ -40,7 +40,7 @@ import SupportIcon from './icons/IconSupport.vue'
   </WelcomeItem>
 
   <WelcomeItem>
-    <template #icon>
+    <template >
       <EcosystemIcon />
     </template>
     <template #heading>Ecosystem</template>
@@ -56,7 +56,7 @@ import SupportIcon from './icons/IconSupport.vue'
   </WelcomeItem>
 
   <WelcomeItem>
-    <template #icon>
+    <template >
       <CommunityIcon />
     </template>
     <template #heading>Community</template>
@@ -74,7 +74,7 @@ import SupportIcon from './icons/IconSupport.vue'
   </WelcomeItem>
 
   <WelcomeItem>
-    <template #icon>
+    <template >
       <SupportIcon />
     </template>
     <template #heading>Support Vue</template>
