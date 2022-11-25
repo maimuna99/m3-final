@@ -36,8 +36,8 @@
 
 </nav>
 
-<div class="container" style="z-index: 999;position: right;">
-  <div class="shopping-cart" style="background-color: #edede9;">
+<div class="container" style="z-index: 999;position: right;background-color: #edede9;">
+  <div class="shopping-cart" style="background-color: #edede9; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div class="shopping-cart-header">
       <div class="shopping-cart-total">
         <span class="lighter-text">Total Items:</span>
@@ -47,9 +47,9 @@
       <li >
         <img  :src=product.thumbnail height="40" width="40" alt="item" />
         <span style="font-size:20px;">{{ product.title }}</span><br/>
-        <span style="font-size:20px;">Price:{{product.price}} OMR</span>
+        <span style="font-size:20px;">Price:{{product.price}} OMR</span><hr/>
       </li>
-      <hr/>
+      
     </ul>
       </div>
     </div> <!--end shopping-cart-header -->
