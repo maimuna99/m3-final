@@ -22,7 +22,7 @@
 
 </script>
 <template >
-
+<!-- 
   
 <select  v-model="SelectedProduct" >
 <option>smartphones</option>
@@ -31,7 +31,7 @@
 <option>skincare</option>
 <option>groceries</option>
 <option>home-decoration</option>
-</select>
+</select> -->
 <div  class="card" v-for="product in response.products" :key="product.id" > 
     <b>{{ product.title }} </b><hr/> 
     <!-- <b>Description: </b>{{product.description}}<br/> -->
@@ -49,8 +49,8 @@
         
         <!-- <button v-model="SelectedProduct">View Details</button> -->
     </div>
-    <RouterLink :to="{name:'product', params:{id:product.id}}"> View Details</RouterLink>
-    <Listing :product="SelectedProduct"/>
+    <RouterLink :to="{name:'product', params:{id:product.id}}"><button>View Details</button> </RouterLink>
+    <!-- <Listing :product="SelectedProduct"/> -->
    
 </div>
 <!-- <p class="card" v-for="product in response.products" :key="product.id">
