@@ -5,10 +5,10 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img  class="logo" src="@/assets/marketicon.png" width="200" height="300" />
+    <img  class="logo" src="@/assets/marketicon.png" width="300" height="300" />
     <div >
-      <h1 style="font-size:50px; font-weight:900;">Shopping Market</h1>
-      <nav>
+      <h1 style="font-size:60px; font-weight:900;">Shopping Market</h1>
+      <nav style="text-align:center ; width:600px">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/category">Category</RouterLink>
         <RouterLink to="/about">About</RouterLink>

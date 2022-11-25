@@ -7,13 +7,6 @@
 
 
 
-  // adding delay
-  await new Promise(resolve => {
-    setTimeout(() => { 
-      resolve()
-    }, 1000)
-  })
-    
   try {
     const res = await fetch('https://dummyjson.com/products/')
     console.log(res)
@@ -28,27 +21,17 @@
 <template >
  
   
-      <a href="#" id="cart"><i class="fa fa-shopping-cart" style="margin-top: 220px; font-size: 30px;"></i> Cart <span class="badge" >{{cartList.length}}</span></a>
+      <a href="#" id="cart"><i class="fa fa-shopping-cart" style="margin-top: 20px; font-size: 40px; align-items: right;"></i> Cart <span class="badge" style="background-color:#540b0e;">{{cartList.length}}</span></a>
 
 
-<!-- <div style="background-color:whitesmoke; margin-left: 10px; width:300px; margin-top: 50px;padding:15px; height:50px; ">
+<div style="background-color:whitesmoke; margin-left: 10px; width:300px; margin-top: 50px;padding:15px; height:50px; ">
   Shopping Cart <hr/>
   <span v-for="product in cartList" :key="product.id">
     {{product}}<br/>
   </span>
-</div> -->
-
-    <!-- <br />
-    <br />
-    <div v-for="product in response.products"
-      :value="product.title"
-      :key="product.id"
-      class="select">
-    <input type="checkbox" id="option1"
-    :value="product.title"
-    v-model="cartList" />
-    <label for="option1">{{ product.title }}</label>
-    </div> -->
+</div>
+<div class="shop">
+  
     
 <div  class="card" v-for="product in response.products" :key="product.id" > 
     <b>{{ product.title }} </b><hr/> 
@@ -75,6 +58,7 @@
 </div>
 <!-- <p class="card" v-for="product in response.products" :key="product.id">
     {{ product.title }}</p> -->
+  </div>
 </template>
 <style>
 
@@ -168,7 +152,7 @@ nav {
 }
 
 .cart-icon {
-  color: #515783;
+  color: #540b0e;
   font-size: 24px;
   margin-right: 7px;
   float: left;
@@ -200,5 +184,11 @@ nav {
   box-shadow: 0 8px 16px 0 hwb(0 75% 11% / 0.2);
 }
 
+ .shop {
+    display: grid;
+    align-self: right;
+    grid-template-columns: 4fr 4fr 1fr ;
+    padding: 0 2rem;
+  } 
 
 </style>
