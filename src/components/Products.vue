@@ -1,6 +1,7 @@
 <script setup>
 	import { ref } from 'vue'
 	const response = ref({})
+  const prod = toRef(props, 'id');
 
   // adding delay
   await new Promise(resolve => {
@@ -21,13 +22,13 @@
 
 <template >
   <div class="card"> 
-    <b>{{ response.title }} </b><hr/> 
-    <b>Description: </b>{{response.description}}<br/>
-    <b>Price: </b>{{response.price}} OMR<br/>
-    <b>Discount percentage: {{response.discountPercentage}}%<br/></b>
-    <b >Category: </b> {{response.category}}
-    <img class='cardimg' :src=response.thumbnail alt="Avatar" style="width:100%">
-    <b>Rating: </b>{{response.rating}}/5
+    <b>{{ prod.title }} </b><hr/> 
+    <b>Description: </b>{{prod.description}}<br/>
+    <b>Price: </b>{{prod.price}} OMR<br/>
+    <b>Discount percentage: {{prod.discountPercentage}}%<br/></b>
+    <b >Category: </b> {{prod.category}}
+    <img class='cardimg' :src=prod.thumbnail alt="Avatar" style="width:100%">
+    <b>Rating: </b>{{prod.rating}}/5
   </div>
 
 </template>

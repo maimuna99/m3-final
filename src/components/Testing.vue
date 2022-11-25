@@ -36,9 +36,10 @@
 
 </nav>
 
-<div class="container" style="z-index: 999;position: right;background-color: #edede9;">
-  <div class="shopping-cart" style="background-color: #edede9; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div class="container" style="z-index: 999;position: right; background-color: #fefae0;">
+  <div class="shopping-cart" style="background-color: #fefae0;">
     <div class="shopping-cart-header">
+      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{cartList.length}}</span>
       <div class="shopping-cart-total">
         <span class="lighter-text">Total Items:</span>
         <span class="main-color-text">{{cartList.length}}</span><hr/>
@@ -47,9 +48,9 @@
       <li >
         <img  :src=product.thumbnail height="40" width="40" alt="item" />
         <span style="font-size:20px;">{{ product.title }}</span><br/>
-        <span style="font-size:20px;">Price:{{product.price}} OMR</span><hr/>
+        <span style="font-size:20px;">Price:{{product.price}} OMR</span>
       </li>
-      
+      <hr/>
     </ul>
       </div>
     </div> <!--end shopping-cart-header -->
@@ -72,7 +73,7 @@
       <input type="checkbox" id="option1"  :value="product"  v-model="cartList" style="margin-left:40px;" />Add To Cart
       <div class="product-price-btn">
         <p><span> Price:{{product.price}} OMR</span></p>
-        <RouterLink :to="{name:'product', params:{id:product.id}}"><button style="margin-top: 40px;" >View Details</button> </RouterLink>
+        <RouterLink :to="{name:'product', params:{id:product.id, title:product.title,description:product.description }}"><button style="margin-top: 40px;" >View Details</button> </RouterLink>
       </div>
     </div>
   </div>
