@@ -23,13 +23,6 @@
   }
 
 
-//   (function(){
- 
-//  $("#cart").on("click", function() {
-//    $(".shopping-cart").fadeToggle( "fast");
-//  });
- 
-// })();
 
 </script>
 <template >
@@ -37,23 +30,13 @@
   
       <a href="#" id="cart"><i class="fa fa-shopping-cart" style="margin-top: 220px; font-size: 30px;"></i> Cart <span class="badge" >{{cartList.length}}</span></a>
 
-<!-- 
-  
-<select  v-model="SelectedProduct" >
-<option>smartphones</option>
-<option>laptops</option>
-<option>fragrances</option>
-<option>skincare</option>
-<option>groceries</option>
-<option>home-decoration</option>
-</select> -->
-<div style="background-color:whitesmoke; margin-left: 10px; width:300px; margin-top: 50px;padding:15px; height:50px; ">
+
+<!-- <div style="background-color:whitesmoke; margin-left: 10px; width:300px; margin-top: 50px;padding:15px; height:50px; ">
   Shopping Cart <hr/>
   <span v-for="product in cartList" :key="product.id">
-    <!-- Cart {{ cartList }} -->
     {{product}}<br/>
   </span>
-</div>
+</div> -->
 
     <!-- <br />
     <br />
@@ -66,6 +49,7 @@
     v-model="cartList" />
     <label for="option1">{{ product.title }}</label>
     </div> -->
+    
 <div  class="card" v-for="product in response.products" :key="product.id" > 
     <b>{{ product.title }} </b><hr/> 
     <!-- <b>Description: </b>{{product.description}}<br/> -->
