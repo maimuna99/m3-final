@@ -29,7 +29,7 @@ function changeImage(event){
 
 </script>
 <template>
-  <div class="wrapper" style="background-color:whitesmoke;  ">
+  <div class="wrapper" style="background-color:whitesmoke;">
     <h1 style="font-weight:900; align-content: center;">{{ response.title }}</h1>
     <div style="background-color:whitesmoke; height: 50px;text-align:right;">
         <b>Rating: </b>{{response.rating}}/5
@@ -52,11 +52,11 @@ function changeImage(event){
         </p>
       </div>
       
-      <div style="padding-top:100px; padding-left: 100px;"><img id="img2" :src=response.images[1] class="tumbs">
+      <div style="margin-top:100px; margin-left: 130px;"><img id="img2" :src=response.images[1] class="tumbs">
 <img id="img3" :src=response.images[2] class="tumbs">
-<img id="img4" :src=response.images[3] class="tumbs"></div>
+<img id="img4" :src=response.images[3] class="tumbs">
     </div>
-  </div>
+  </div> </div>
 
 </template>
 

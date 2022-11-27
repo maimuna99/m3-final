@@ -1,7 +1,6 @@
 
 <script setup></script>
-<template class="bg">
-  
+<template >
 
 </template>
 
