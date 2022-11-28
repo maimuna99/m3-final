@@ -2,6 +2,7 @@
 	import { ref } from 'vue';
 	const response = ref({});
 
+
   let imges = document.images
 let primary = document.getElementById("primary")
 
